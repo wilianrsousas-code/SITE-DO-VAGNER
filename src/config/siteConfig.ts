@@ -156,8 +156,8 @@ export const siteConfig: SiteConfig = {
   },
 
   hero: {
-    mottoHeadline: "Realizando sonhos, construindo histórias.",
-    headline: "Seu próximo endereço merece uma boa conversa.",
+    mottoHeadline: "Seu próximo endereço merece uma boa conversa.",
+    headline: "Realizando sonhos, construindo histórias.",
     subtitle:
       "Consultoria imobiliária dedicada para você conquistar casas na planta, casas prontas, apartamentos na planta e apartamentos prontos com condições claras e simulação personalizada.",
     primaryCta: "FAZER UMA SIMULAÇÃO NO WHATSAPP",

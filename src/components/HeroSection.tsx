@@ -62,19 +62,16 @@ export const HeroSection: React.FC = () => {
                 <p className="text-[11px] sm:text-xs font-medium tracking-[0.22em] text-[#D4AF6A] uppercase">
                   {siteConfig.brand.roleTitle} · {siteConfig.brand.creci}
                 </p>
-                <p className="mt-1 text-xs italic tracking-wider text-[#D8ECFA]">
-                  &ldquo;{siteConfig.brand.motto}&rdquo;
-                </p>
               </div>
             </a>
 
-            {/* Frase da Marca no Hero */}
-            <p className="mb-2 text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-[#D4AF6A]">
+            {/* Frase menor complementar no Hero */}
+            <p className="mb-3 text-xs sm:text-sm font-medium tracking-[0.18em] uppercase text-[#D8ECFA]/90">
               {siteConfig.hero.mottoHeadline}
             </p>
 
-            {/* Headline Principal */}
-            <h1 className="font-editorial text-[clamp(2.25rem,4.4vw,4rem)] font-medium leading-[1.08] tracking-[-0.01em] text-[#FFFFFF] text-balance max-w-2xl">
+            {/* Headline Principal em Grande Destaque */}
+            <h1 className="font-editorial text-[clamp(2.5rem,5vw,4.35rem)] font-semibold leading-[1.06] tracking-[-0.01em] text-[#D4AF6A] text-balance max-w-2xl">
               {siteConfig.hero.headline}
             </h1>
 
