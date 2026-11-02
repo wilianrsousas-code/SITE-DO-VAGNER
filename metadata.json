@@ -1,0 +1,8 @@
+{
+  "name": "VAGNER | Uma Nova Perspectiva",
+  "description": "Apresentação pessoal e atendimento dedicado para empreendimentos residenciais da VIC Engenharia em Franco da Rocha, São Paulo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
