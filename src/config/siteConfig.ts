@@ -130,7 +130,7 @@ export const siteConfig: SiteConfig = {
     shortName: "Vagner Costa",
     roleTitle: "CORRETOR DE IMÓVEIS",
     concept: "SOLUÇÕES IMOBILIÁRIAS",
-    motto: "Realizando sonhos, construindo histórias.",
+    motto: "Realizando sonhos, mudando histórias.",
     fullTitle: "VAGNER COSTA | CORRETOR DE IMÓVEIS",
     creci: "CRECI 270 543-F",
     locationLabel: "São Paulo e Região Metropolitana",
@@ -157,7 +157,7 @@ export const siteConfig: SiteConfig = {
 
   hero: {
     mottoHeadline: "Seu próximo endereço merece uma boa conversa.",
-    headline: "Realizando sonhos, construindo histórias.",
+    headline: "Realizando sonhos, mudando histórias.",
     subtitle:
       "Consultoria imobiliária dedicada para você conquistar casas na planta, casas prontas, apartamentos na planta e apartamentos prontos com condições claras e simulação personalizada.",
     primaryCta: "FAZER UMA SIMULAÇÃO NO WHATSAPP",

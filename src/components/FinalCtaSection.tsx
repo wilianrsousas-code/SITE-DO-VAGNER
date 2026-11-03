@@ -133,7 +133,7 @@ export const FinalCtaSection: React.FC = () => {
               >
                 <img
                   src={siteConfig.brand.logoFullSrc}
-                  alt="Logo Vagner Costa — Corretor de Imóveis — Realizando Sonhos, Construindo Histórias"
+                  alt="Logo Vagner Costa — Corretor de Imóveis — Realizando Sonhos, Mudando Histórias"
                   className="h-36 sm:h-40 w-auto object-contain"
                 />
                 <span className="mt-3 font-mono text-xs font-medium tracking-widest text-[#D4AF6A]">
