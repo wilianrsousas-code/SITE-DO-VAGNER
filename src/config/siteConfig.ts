@@ -41,6 +41,7 @@ export interface DevelopmentItem {
   imageSrc: string;
   imageAlt: string;
   imagePosition?: string;
+  soldOut?: boolean;
   gallery?: DevelopmentGalleryImage[];
   whatsappMessage: string;
 }
@@ -485,27 +486,28 @@ export const siteConfig: SiteConfig = {
         line: "franco-da-rocha",
         builder: "VIC",
         region: "Vila Olinda · Franco da Rocha, SP",
-        badge: "Obras Avançadas",
-        priceHighlight: "Plantas de 47,22 m² a 55,16 m²",
-        conditionSummary: "Apartamentos com varanda, quadra esportiva, piscina e lazer mobiliado",
+        badge: "100% Vendido",
+        soldOut: true,
+        priceHighlight: "100% Vendido · Plantas de 47,22 m² a 55,16 m²",
+        conditionSummary: "Empreendimento 100% vendido · Consulte opções semelhantes em Franco da Rocha",
         description:
-          "Localizado na Rua Campos Sales, S/N (Vila Olinda, Franco da Rocha), o Eco Vic Panorama oferece apartamentos de 47,22 m² a 55,16 m² com varanda, preparação para ar-condicionado no quarto de casal e áreas de lazer entregues mobiliadas e decoradas.",
+          "Localizado na Rua Campos Sales, S/N (Vila Olinda, Franco da Rocha), o Eco Vic Panorama teve todas as suas unidades comercializadas (100% vendido). Fale com Vagner Costa para conhecer o Eco Vic Horizonte e outras opções disponíveis na região.",
         conditions: [
           {
-            label: "Apartamentos com Varanda",
-            price: "47,22 m² a 55,16 m²",
-            detail: "Obras em estágio avançado · Consulte condições de financiamento",
+            label: "Status de Vendas",
+            price: "100% Vendido",
+            detail: "Unidades esgotadas · Consulte opções semelhantes com Vagner Costa",
           },
         ],
         highlights: [
+          "Empreendimento com 100% das unidades vendidas",
           "Apartamentos amplos de 47,22 m² a 55,16 m² com varanda",
           "Acesso por biometria digital na portaria e na entrada das torres",
-          "Preparação para ar-condicionado no quarto de casal e tomada USB na sala",
           "Lazer completo: Piscina, Quadra Esportiva, Espaço Gourmet, Salão de Festas, Fitness, Playground e Pet Place",
         ],
-        programTags: ["Franco da Rocha", "47 m² a 55 m²", "Com Varanda"],
+        programTags: ["100% Vendido", "Franco da Rocha", "47 m² a 55 m²"],
         imageSrc: "/images/vic/panorama/lazer-geral.webp",
-        imageAlt: "Empreendimento Eco Vic Panorama em Franco da Rocha",
+        imageAlt: "Empreendimento Eco Vic Panorama em Franco da Rocha — 100% Vendido",
         imagePosition: "object-center",
         gallery: [
           {
@@ -605,7 +607,7 @@ export const siteConfig: SiteConfig = {
           },
         ],
         whatsappMessage:
-          "Olá, Vagner! Vi no seu site o empreendimento ECO VIC PANORAMA (47,22 m² a 55,16 m²) em Franco da Rocha e gostaria de fazer uma simulação.",
+          "Olá, Vagner! Vi no seu site que o ECO VIC PANORAMA está 100% vendido e gostaria de conhecer empreendimentos semelhantes disponíveis com você.",
       },
     ],
   },

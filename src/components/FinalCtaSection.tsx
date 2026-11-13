@@ -17,11 +17,13 @@ export const FinalCtaSection: React.FC = () => {
       label: "Simulação Geral",
       message: siteConfig.contact.defaultWhatsappMessage,
     },
-    ...siteConfig.developmentsSection.items.map((item) => ({
-      id: item.id,
-      label: item.name,
-      message: item.whatsappMessage,
-    })),
+    ...siteConfig.developmentsSection.items
+      .filter((item) => !item.soldOut)
+      .map((item) => ({
+        id: item.id,
+        label: item.name,
+        message: item.whatsappMessage,
+      })),
   ];
 
   const [selectedSubjectId, setSelectedSubjectId] = useState<string>("geral");

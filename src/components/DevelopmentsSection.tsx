@@ -180,8 +180,22 @@ export const DevelopmentsSection: React.FC = () => {
                         isVerticalBanner
                           ? "object-contain object-center"
                           : "object-cover object-center"
-                      }`}
+                      } ${item.soldOut ? "grayscale-[35%] brightness-[0.8]" : ""}`}
                     />
+
+                    {/* Faixa Diagonal de 100% VENDIDO */}
+                    {item.soldOut && (
+                      <div
+                        className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden bg-[#08152C]/25"
+                        aria-label="Empreendimento 100% Vendido"
+                      >
+                        <div className="w-[140%] -rotate-12 bg-[#9B1C1C] border-y-2 border-[#D4AF6A] py-3 text-center shadow-xl">
+                          <span className="font-editorial text-xl sm:text-2xl font-bold tracking-[0.22em] text-[#FFFFFF] uppercase drop-shadow-sm">
+                            100% VENDIDO
+                          </span>
+                        </div>
+                      </div>
+                    )}
 
                     {/* Indicador de imagens conceituais e plantas para Horizonte e Panorama */}
                     {hasGallery && (
@@ -271,9 +285,15 @@ export const DevelopmentsSection: React.FC = () => {
                     href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-full items-center justify-between bg-[#0F2952] px-5 py-3.5 text-xs font-medium tracking-[0.1em] text-[#FFFFFF] transition-editorial hover:bg-[#1B3B6F] whitespace-nowrap"
+                    className={`inline-flex w-full items-center justify-between px-5 py-3.5 text-xs font-medium tracking-[0.1em] text-[#FFFFFF] transition-editorial whitespace-nowrap ${
+                      item.soldOut
+                        ? "bg-[#3B485E] hover:bg-[#1B3B6F]"
+                        : "bg-[#0F2952] hover:bg-[#1B3B6F]"
+                    }`}
                   >
-                    <span>FAZER SIMULAÇÃO</span>
+                    <span>
+                      {item.soldOut ? "VER OPÇÕES SEMELHANTES" : "FAZER SIMULAÇÃO"}
+                    </span>
                     <ArrowUpRight className="h-4 w-4 text-[#7CC0F0]" />
                   </a>
                 </div>
@@ -302,12 +322,19 @@ export const DevelopmentsSection: React.FC = () => {
                 <p className="text-[11px] font-medium tracking-[0.16em] text-[#7CC0F0] uppercase">
                   {selectedProduct.builder} · {selectedProduct.region}
                 </p>
-                <h3
-                  id="product-modal-title"
-                  className="font-editorial text-2xl font-semibold tracking-wide"
-                >
-                  {selectedProduct.name}
-                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3
+                    id="product-modal-title"
+                    className="font-editorial text-2xl font-semibold tracking-wide"
+                  >
+                    {selectedProduct.name}
+                  </h3>
+                  {selectedProduct.soldOut && (
+                    <span className="bg-[#9B1C1C] border border-[#D4AF6A] px-2.5 py-0.5 text-[11px] font-bold tracking-[0.16em] text-[#FFFFFF] uppercase">
+                      100% VENDIDO
+                    </span>
+                  )}
+                </div>
               </div>
 
               <button
@@ -340,6 +367,14 @@ export const DevelopmentsSection: React.FC = () => {
                       referrerPolicy="no-referrer"
                       className="w-full h-auto max-h-[460px] object-contain mx-auto"
                     />
+
+                    {selectedProduct.soldOut && (
+                      <div className="pointer-events-none absolute top-4 right-0 bg-[#9B1C1C] border-y border-l border-[#D4AF6A] px-4 py-1.5 shadow-lg">
+                        <span className="text-xs font-bold tracking-[0.18em] text-[#FFFFFF] uppercase">
+                          100% VENDIDO
+                        </span>
+                      </div>
+                    )}
 
                     {/* Controles de navegação se o produto tiver múltiplas imagens (Horizonte / Panorama) */}
                     {activeModalGallery && activeModalGallery.length > 1 && (
@@ -514,7 +549,11 @@ export const DevelopmentsSection: React.FC = () => {
                     >
                       <span className="inline-flex items-center gap-2.5">
                         <WhatsAppIcon className="h-4 w-4 text-[#FFFFFF]" />
-                        <span>FALE COM VAGNER · FAZER SIMULAÇÃO</span>
+                        <span>
+                          {selectedProduct.soldOut
+                            ? "FALE COM VAGNER · VER OPÇÕES SEMELHANTES"
+                            : "FALE COM VAGNER · FAZER SIMULAÇÃO"}
+                        </span>
                       </span>
                       <ArrowUpRight className="h-4 w-4 text-[#FFFFFF]" />
                     </a>
